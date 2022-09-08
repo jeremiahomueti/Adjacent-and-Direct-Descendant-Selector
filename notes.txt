@@ -1,0 +1,57 @@
+ADJACENT SELECTOR
+Select only the paragraphs that are immediately preceded by 
+an <h1>
+
+
+h1 + p {
+    color: red;
+}
+
+
+DIRECT CHILD
+Select only the <li>'s that are direct children (or descendants)
+of a <div> element.
+
+div . li {
+    color: white;
+}
+
+For example, in an index.html footer section that contains:
+
+<footer>
+
+    <nav>
+        <ul> 
+            <li>
+                <a href="#home">Home</a>
+            </li>
+        </ul>
+    </nav>
+
+<a href = "#license">Content is available under these license.</a>
+
+</footer>
+
+... So, continuation: we have a nav, an unordered list, 
+and a list, within the list element, a link to home.
+
+But notice that the:
+<a href = "#license">Content is available under these license.</a>
+
+...is directly under footer, or is a direct descendant or child
+of the footer section, thus, a direct descendant selector 
+demanding to modify all lists that are d d s will affect that 
+
+guy:
+
+<a href = "#license">Content is available under these license.</a>
+
+
+********************************************************************
+
+So, to target the anchor tag that is a direct descendant of 
+the footer, we use the right angle greater than sign:
+
+footer > a {
+    color: black;
+}
